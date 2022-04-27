@@ -516,12 +516,12 @@ void draw() {
            soldierPositionY[i] = soldierY[i]*80;
            }
           // Initialize cabbages and their position
-          for(int i=0 ; i<6 ;i++){
-           cabbageX[i] = floor(random(0,8));
-           }
-          for(int i=0 ; i<6 ;i++){
-           cabbageY[i] = floor(random(0+(i*4),4+(4*i)));
-           }
+            for(int c=0 ; c<6 ;c++){
+     cabbageX[c] = (floor(random(0,8))*SOIL_SIZE);
+     }
+    for(int c=0 ; c<6 ;c++){
+     cabbageY[c] = (floor(random(0,4))*SOIL_SIZE)+4*SOIL_SIZE*c;
+     }
         // Initialize soilHealth     
       //soilHealth = new int[SOIL_COL_COUNT][SOIL_ROW_COUNT];
       for(int i = 0; i < soilHealth.length; i++){
@@ -642,4 +642,4 @@ void keyReleased(){
       break;
     }
   }
-}
+} //<>//
